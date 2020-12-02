@@ -1,12 +1,7 @@
 .father {
   display: grid;
   grid-template-columns: repeat(4, 100px);
-  grid-template-rows: 100px repeat(2, 200px) 100px;
-  grid-template-areas:
-    "header header header header"
-    "content content content nav"
-    "content content content nav"
-    "footer footer footer footer";
+  grid-template-rows: repeat(4, 100px);
 }
 .father div {
   display: flex;
@@ -18,20 +13,35 @@
 
 .header {
   background-color: green;
-  grid-area: header;
+  grid-column: 1/5;
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
 }
 
 .content {
   background-color: yellowgreen;
-  grid-area: content;
+  grid-column: 1/-2;
+  /* grid-column-start: 1;
+  grid-column-end: 4; */
+  grid-row: 2/-2;
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
 }
 
 .nav {
   background-color: orange;
-  grid-area: nav;
+  grid-row: 2/-2;
+  /* grid-row-start: 2;
+  grid-row-end: 4; */
 }
 
 .footer {
   background-color: violet;
-  grid-area: footer;
+
+  grid-column: span 4;
+
+  /* grid-column: 1/-1; */
+
+  /* grid-column-start: 1;
+  grid-column-end: 5; */
 }
