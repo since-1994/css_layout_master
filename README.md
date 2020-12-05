@@ -2,5 +2,5 @@
 
 - [ ] scss
 - [ ] grid
-- [ ] grid-template-columns
-- [ ] grid-template-rows
+- [x] grid-template-columns
+- [x] grid-template-rows

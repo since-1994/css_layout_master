@@ -1,142 +1,200 @@
-@import "_variables.scss";
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@200;700&display=swap");
 @import "reset";
-@keyframes twinkle {
-  from {
-    transform: scale(1);
-  }
-  to {
-    transform: scaleY(0);
-  }
-}
+@import "_variables";
+
 * {
   box-sizing: border-box;
 }
 
 body {
-  height: 100vh;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
-    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
-
-  background-color: $white;
+  padding: 0 $side-margin 0 $side-margin;
 }
-
-header {
+.header {
+  padding: 0 $side-margin;
+  background-color: white;
   position: fixed;
+  z-index: 100;
+  height: 180px;
   top: 0;
   left: 0;
-  height: 100%;
-  width: $fixedWidth;
+  width: 100vw;
   display: flex;
-  flex-direction: column;
   justify-content: space-between;
-  padding: 10vh 150px 72px 72px;
-  color: $red;
-}
-.header__title {
-  position: relative;
-  i {
-    font-size: 40px;
-    position: absolute;
-    top: 42%;
-    left: 14.5%;
-    animation: twinkle 0.3s ease-in-out infinite;
-  }
-  h1 {
-    font-weight: 300;
-    font-size: 85px;
-    text-transform: uppercase;
-    width: 50%;
-    letter-spacing: 5px;
-  }
-}
-h3 {
-  font-weight: 300;
-  font-size: 30px;
-  margin-bottom: 30px;
-}
-
-h3,
-p {
-  width: 80%;
-  line-height: 1.2;
-  text-align: justify;
-}
-
-p {
-  font-weight: 300;
-  font-size: 20px;
-  margin-bottom: 40px;
-}
-
-nav {
-  &:hover {
-    opacity: 1;
-  }
-  ul {
-    line-height: 1.3;
-    width: 120%;
-    display: flex;
-    flex-wrap: wrap;
-  }
-  li {
-    padding: 0;
-    font-weight: 300;
-    margin-right: 15px;
-    margin-bottom: 10px;
+  align-items: center;
+  text-transform: uppercase;
+  font-size: 17px;
+  color: rgba(0, 0, 0, 0.6);
+  letter-spacing: 5px;
+  .header__column {
     cursor: pointer;
-    font-size: 18px;
-    color: rgba(0, 0, 0, 0.5);
-    border-bottom: 1px solid rgba(0, 0, 0, 0.3);
-    &:hover {
-      color: black;
+    display: flex;
+    width: 33%;
+    &:nth-child(1) {
+      justify-content: flex-start;
+    }
+    &:nth-child(2) {
+      justify-content: center;
+    }
+    &:nth-child(3) {
+      justify-content: flex-end;
+    }
+  }
+  .header__menu {
+    ul {
+      display: flex;
+      li {
+        margin-right: 50px;
+        &:hover {
+          color: rgba(0, 0, 0, 0.3);
+        }
+      }
+    }
+  }
+  .header__title {
+    color: rgba(0, 0, 0, 0.9);
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    width: 60px;
+    height: 60px;
+    justify-items: center;
+    font-size: 20px;
+    font-weight: 700;
+    column-gap: 15px;
+    row-gap: 12px;
+  }
+
+  .header__my-page {
+    span {
+      &:first-child {
+        margin-right: 50px;
+      }
     }
   }
 }
-
 main {
-  margin-left: $fixedWidth;
-  height: fit-content;
-
-  .movie {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.08), transparent);
-    background-color: $red;
-    height: 100vh;
+  margin-top: 180px;
+  .main__title {
+    margin-bottom: 20px;
+    position: relative;
+    img {
+      width: 100%;
+    }
+    .main__text {
+      position: absolute;
+      left: 0;
+      top: 0;
+      display: flex;
+      width: 100%;
+      height: 100%;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        width: 40%;
+        font-size: 65px;
+        font-weight: 200;
+        text-align: center;
+        line-height: 1.2;
+        margin-bottom: 65px;
+      }
+      a {
+        font-size: 15px;
+        color: rgba(0, 0, 0, 0.9);
+        text-decoration: none;
+        padding: 40px 120px;
+        border: 1px solid rgba(0, 0, 0, 0.7);
+        text-transform: uppercase;
+        letter-spacing: 5px;
+        &:hover {
+          background-color: rgba(0, 0, 0, 0.9);
+          color: white;
+        }
+      }
+    }
+  }
+  .post {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    box-shadow: 5px 0 30px rgba(0, 0, 0, 0.3);
-    .wrapper {
-      width: 80%;
+    .post__text {
+      background-color: $brown;
+      padding: 150px 80px;
       display: flex;
       flex-direction: column;
-      color: white;
-      .movie__header {
-        font-size: 40px;
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-end;
-        margin-bottom: 22px;
-        h4 {
-          text-transform: uppercase;
-        }
-        h5 {
-          font-size: 15px;
-        }
+      justify-content: space-between;
+      align-items: center;
+      width: 50%;
+      letter-spacing: 5px;
+      h1 {
+        line-height: 1.2;
+        font-size: 45px;
+        font-weight: 200;
+        text-align: center;
+        letter-spacing: 0;
       }
-      .movie__image {
-        position: relative;
-        box-shadow: 5px 20px 32px rgba(0, 0, 0, 0.5);
-        img {
-          position: relative;
-          width: 100%;
-        }
-        i {
-          left: 50%;
-          top: 48%;
-          position: absolute;
-        }
+      a {
+        color: inherit;
+        text-decoration: none;
       }
+    }
+    img {
+      width: 50%;
+    }
+  }
+  .post--odd {
+    img {
+      order: 1;
+    }
+  }
+}
+.section__display {
+  margin-top: 50px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(2, 1fr);
+  img {
+    max-width: 100%;
+    /*
+    위에 이게 엄청 중요하다. !!
+    grid-template-columns: repeat(4, 1fr)을 하더라도 이미지가 크기를 넘어갈 수 가 있다. 그래서
+    width를 정해주는게 중요하다.
+    transition: opacity 0.2s ease-in-out;
+    */
+    &:hover {
+      opacity: 0.7;
+    }
+  }
+}
+footer {
+  padding: 0 100px;
+  color: rgba(0, 0, 0, 0.5);
+  height: 40vh;
+  margin: 0 -$side-margin 0 -$side-margin;
+  margin-top: 30px;
+  background-color: $brown;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  letter-spacing: 5px;
+  font-size: 15px;
+  text-transform: uppercase;
+  .footer__column {
+    width: 33%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    line-height: 2.4;
+    h1 {
+      margin-bottom: 50px;
+    }
+    span {
+      color: black;
+      font-weight: 600;
+    }
+    &:nth-child(2) {
+      border: 1px solid rgba(0, 0, 0, 0.6);
+      border-bottom: none;
+      border-top: none;
     }
   }
 }
