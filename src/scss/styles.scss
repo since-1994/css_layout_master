@@ -1,100 +1,79 @@
 @import "reset";
 @import "_variables";
-@import url("https://fonts.googleapis.com/css2?family=Nerko+One&display=swap");
 
 * {
   box-sizing: border-box;
 }
-html {
-  font-family: "Nerko One", cursive;
-}
+
 body {
   width: 100vw;
-  height: 100vh;
 }
 
-main {
-  font-size: 25px;
-  color: $brown;
-  text-transform: uppercase;
-  width: 100vw;
-  height: 100vh;
+header {
+  font-size: 30px;
+  height: 50px;
   display: grid;
-  grid-template-columns: 2fr 3fr 2fr;
-  grid-template-rows: 1fr 9fr 1fr;
-  gap: 1px;
-  background-color: $brown;
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  grid-template-columns: 9fr 4fr;
+  grid-template-rows: 1fr;
 
-  div {
-    width: 100%;
-    height: 100%;
-    background-color: #ffffff;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    &:nth-child(5) {
-      background-image: url("http://10x19.co/staging/wp-content/uploads/2019/12/Dickens_9-768x768.jpg");
-      background-size: cover;
-    }
-  }
-  .main__title {
-    span {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 15px;
-      width: 30px;
-      height: 30px;
-      border: 2.5px solid $brown;
-      border-radius: 50%;
-      &:nth-child(2) {
-        font-size: 25px;
-      }
-    }
-  }
-  .main__select {
+  .header__left {
     display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: repeat(5, 1fr);
-    span {
-      height: 100%;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-bottom: 1px solid $brown;
-
-      &:last-child {
-        border-bottom: none;
+    grid-template-columns: 1fr 8fr;
+    .wrapper {
+      color: $grey;
+      span {
+        margin-right: 50px;
       }
       &:hover {
-        background-color: $brown;
         color: white;
       }
     }
-  }
-
-  .main__notice {
-    display: flex;
-    align-items: center;
-    overflow: hidden;
-    span {
-      max-width: 100%;
-      white-space: nowrap;
-      animation: translateLeft 10s linear infinite;
+    h1:hover {
+      color: white;
     }
+
+    &:hover {
+      background-color: $grey;
+    }
+  }
+  .header__right {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    &:hover {
+      color: white;
+      background-color: $grey;
+    }
+  }
+  & > div {
+    background-color: white;
+    padding: 15px;
+    .header__lan {
+      font-size: 20px;
+    }
+  }
+  &:hover {
+    cursor: pointer;
   }
 }
 
-@keyframes translateLeft {
-  0% {
-    transform: translateX(0);
-  }
-
-  50% {
-    transform: translateX(-100%);
-  }
-
-  100% {
-    transform: translateX(0);
+main {
+  margin-top: 60px;
+  display: grid;
+  grid-template-columns: repeat(3, 33.33vw);
+  width: 100%;
+  .post__item {
+    display: flex;
+    flex-direction: column;
+    img {
+      width: 100%;
+    }
+    span {
+      padding: 5px;
+    }
   }
 }
