@@ -1,6 +1,3 @@
 # css_layout_master
 
-- [ ] scss
-- [ ] grid
-- [x] grid-template-columns
-- [x] grid-template-rows
+- [grid의 justify-items, align-items]()
