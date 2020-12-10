@@ -1,79 +1,66 @@
-@import "reset";
-@import "_variables";
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+
+$orange: #f04606;
 
 * {
   box-sizing: border-box;
 }
 
 body {
-  width: 100vw;
-}
-
-header {
-  font-size: 30px;
-  height: 50px;
-  display: grid;
-  position: fixed;
-  left: 0;
-  top: 0;
-  right: 0;
-  grid-template-columns: 9fr 4fr;
-  grid-template-rows: 1fr;
-
-  .header__left {
-    display: grid;
-    grid-template-columns: 1fr 8fr;
-    .wrapper {
-      color: $grey;
-      span {
-        margin-right: 50px;
-      }
-      &:hover {
-        color: white;
-      }
-    }
-    h1:hover {
-      color: white;
-    }
-
-    &:hover {
-      background-color: $grey;
-    }
-  }
-  .header__right {
-    display: flex;
-    justify-content: space-between;
-    align-items: flex-end;
-    &:hover {
-      color: white;
-      background-color: $grey;
-    }
-  }
-  & > div {
-    background-color: white;
-    padding: 15px;
-    .header__lan {
-      font-size: 20px;
-    }
-  }
-  &:hover {
-    cursor: pointer;
-  }
-}
-
-main {
-  margin-top: 60px;
-  display: grid;
-  grid-template-columns: repeat(3, 33.33vw);
+  background-color: #dde1d4;
+  padding: 15px;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+    Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
   width: 100%;
-  .post__item {
+  height: 100vh;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+
+  span {
+    background-color: #dae7de;
     display: flex;
-    flex-direction: column;
-    img {
-      width: 100%;
+    justify-content: center;
+    align-items: center;
+    font-size: 70px;
+    font-weight: 600;
+    letter-spacing: 5px;
+    &:nth-child(1) {
+      color: $orange;
+      grid-column: 1 / span 2;
+      grid-row: 1 / span 2;
     }
-    span {
-      padding: 5px;
+    &:nth-child(2) {
+      background-color: #008a69;
+      color: white;
+      grid-column: 3 / span 2;
+      grid-row: 1 / span 2;
+    }
+    &:nth-child(3) {
+      background-color: $orange;
+      color: white;
+      grid-column: 1 / span 2;
+      grid-row: 3 / span 2;
+    }
+    &:nth-child(n + 4) {
+      font-size: 40px;
+    }
+    &:nth-child(4) {
+      background-color: #f6abc6;
+      color: $orange;
+    }
+    &:nth-child(5) {
+      background-color: #5f5fa9;
+      color: white;
+    }
+    &:nth-child(6) {
+      background-color: #ffc129;
+      color: $orange;
+    }
+    &:nth-child(7) {
+      background-color: #f87374;
+      color: white;
     }
   }
 }
