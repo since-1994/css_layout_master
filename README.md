@@ -1,7 +1,5 @@
 # css_layout_master
 
-<<<<<<< HEAD
-
 ### [grid의 justify-items, align-items]()
 
 ### auto columns and rows
@@ -78,6 +76,3 @@ auto-fit과 auto-fill은 repeat과 함께 사용되는 것으로 아래 코드�
 min-content, max-content는 px, fr 과 같은 단위와 다르게 셀이 포함한 content에 따라 변한다. max-content는 content에 맞게 최대로 늘어나고 min-content는 content를 최소로 잘라 맞춘다. 아래의 예시가 적절하다.
 
 # <img src="./readImg/img3.png" width="400">
-
-- [grid의 justify-items, align-items](https://github.com/since-1994/css_layout_master/commit/fe68ac2a0b0e3b6106e102714421bb9d9fc562e7)
-  > > > > > > > 4b9cd5cb29178af8d39c258b309b6931212d8c4a
