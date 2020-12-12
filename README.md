@@ -1,6 +1,6 @@
 # css_layout_master
 
-## GRID
+## 1. GRID
 
 ### [grid의 justify-items, align-items]()
 
@@ -79,7 +79,7 @@ min-content, max-content는 px, fr 과 같은 단위와 다르게 셀이 포함�
 
 <img src="./readImg/img3.png" width="400">
 
-## SCSS
+## 2. SCSS
 
 ### variables
 
